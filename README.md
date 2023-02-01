@@ -1,4 +1,4 @@
-Chat With GPT, speaking and answering !!!
+Talk With GPT, speaking and answering !!!
 
 get your ApikEY at 
 
