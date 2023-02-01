@@ -1,11 +1,9 @@
 Talk With GPT, speaking and answering !!!
 
-get your ApikEY at 
+- get your ApikEY at https://platform.openai.com/account/api-keys
 
-https://platform.openai.com/account/api-keys
+- replace it in openAi.js
 
-and replace it in openAi.js
+- npm install
 
-npm install
-
-node index.js
+- node index.js
