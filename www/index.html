@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<style>
+			/* CSS comes here */
+			header {
+				background-color: white;
+				position: fixed;
+				top:0;
+				left:0;
+				width:100vw;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				
+			}
+			main {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+			body {
+			    font-family: arial;
+			}
+			button {
+			    padding:10px;
+				width:100px;
+				height: 100px;
+			    background-color:#6a67ce;
+			    color: #FFFFFF;
+			    border: 0px;
+			    cursor:pointer;
+			    border-radius: 50%;
+			}
+			#output {
+				margin-top: 120px;
+			    background-color:#F9F9F9;
+			    padding:20px;
+			    width: 100%;
+			    line-height:25px;
+				box-sizing: border-box;
+
+			}
+			.hide {
+			    display:none;
+			}
+			.show {
+			    display:block;
+			}
+
+.bounce{
+	animation: bounce 0.5s linear infinite; 
+}
+.loading {
+	    display: inline-block;
+		height: 30px;
+		width: 30px;
+		border: 2px solid #6a67ce;
+		animation: rotate 1.5s linear infinite; 
+
+}
+@keyframes rotate{
+  to{ transform: rotate(360deg); }
+}
+
+@keyframes bounce{
+  to{ transform: scale(1.1); }
+}
+
+
+h1 {
+	font-weight: bold;
+	font-size:15px;
+	display: inline
+}
+
+		</style>
+		<title>Chat avec Jeppetto</title>
+	</head>
+	<body>
+		<main>
+		<header>
+        <p><button type="button" id="btnSpeak" onclick="runSpeechRecognition()">Clique ici pour parler</button> &nbsp; <span id="action"></span></p>
+       
+	</header> <div id="output" class="hide"></div>	</main>
+        <form style="display: none;">
+            <label for="txt">Enter text</label>
+            <input id="txt" type="text" class="txt" />
+            <div>
+              <label for="rate">Rate</label
+              ><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate" />
+              <div class="rate-value">1</div>
+              <div class="clearfix"></div>
+            </div>
+            <div>
+              <label for="pitch">Pitch</label
+              ><input type="range" min="0" max="2" value="1" step="0.1" id="pitch" />
+              <div class="pitch-value">1</div>
+              <div class="clearfix"></div>
+            </div>
+            <select></select>
+
+          </form>
+		<script src="script.js">
+		
+		</script>
+	</body>
+</html>
