@@ -95,9 +95,13 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
 function speak(text) {
   if (synth.speaking) {
     console.error("speechSynthesis.speaking");
-    return;
-  }
+    synth.cancel();
 
+  }
+var textes = text.split(".");
+textes.forEach(text=>speak_sentence(text))    };
+
+function speak_sentence(text){
   if (text!== "") {
     const utterThis = new SpeechSynthesisUtterance(text);
 
